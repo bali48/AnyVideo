@@ -1,0 +1,47 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+// import { AuthenticationService } from '@app/core';
+import { finalize } from 'rxjs/operators';
+import { AuthenticationService } from '../../core';
+
+@Component({
+  selector: 'app-landingpage',
+  templateUrl: './landingpage.component.html',
+  styleUrls: ['./landingpage.component.css']
+})
+export class landingpageComponent implements OnInit {
+  loginForm: FormGroup;
+  resetPasswordForm: FormGroup;
+  isLoading = false;
+  constructor(
+    public router: Router,
+    private formBuilder: FormBuilder,
+    private authenticationService: AuthenticationService
+  ) {
+    this.createForm();
+  }
+
+  ngOnInit() {}
+
+  login() {
+    this.isLoading = true;
+        this.router.navigate(['/'], {
+              replaceUrl: true
+            });
+  }
+
+  resetPassword() {
+    // TODO: Implement Reset Password
+  }
+
+  private createForm() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', [Validators.required]],
+      password: ['', Validators.required]
+    });
+    this.resetPasswordForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
+}
