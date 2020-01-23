@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
 
 import { BlankComponent, FullComponent } from './shared';
+import { landingpageComponent } from './authentication/landingPage';
 
 export const AppRoutes: Routes = [
+ 
   {
-    path: '',
+    path: 'admin',
     component: FullComponent,
     children: [
       {

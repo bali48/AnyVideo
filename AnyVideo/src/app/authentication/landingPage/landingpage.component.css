@@ -1,19 +1,22 @@
-.signIn {
-  margin-bottom: 15px;
-  display: block;
-  font-size: 19px;
-  font-weight: 400;
+.URL-input, .convert-button {
+  font-size:1.3em;
+  padding:5px 10px;
 }
-
-.login-register .col-md-12 {
-  padding-left: 0px;
-  padding-right: 0px;
+.URL-input {
+  border-radius:4px 0px 0px 4px;
+  width:30em;
+  text-align: left;
+  border:2px solid #EEEEEE;
+  background: #EEEEEE;
+  outline:none;
+  border: #0485ff solid;
 }
-
-.login-register .form-horizontal label {
-  margin-left: 5px;
+.URL-input:focus {
+  border:2px solid #0485ff;
 }
-
-.login-register .btn-info {
-  margin-top: 20px;
+.convert-button {
+  border-radius:0px 4px 4px 0px;
+  border:2px solid #0485ff;
+  background: #0485ff;
+  color:white;
 }

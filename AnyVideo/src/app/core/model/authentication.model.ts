@@ -3,7 +3,7 @@ declare namespace Authentication {
     username: string;
     password: string;
   }
-
+ 
   export interface SignupPayload {
     firstName: string;
     lastName: string;

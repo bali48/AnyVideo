@@ -26,25 +26,25 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.isLoading = true;
-    // this.authenticationService
-    //   .login(this.loginForm.value)
-    //   .pipe(
-    //     finalize(() => {
-    //       this.loginForm.markAsPristine();
-    //       this.isLoading = false;
-    //     })
-    //   )
-    //   .subscribe(
-    //     (credentials: Authentication.Credentials) => {
-    //       console.log(credentials);
-    //       this.router.navigate(['/'], {
-    //         replaceUrl: true
-    //       });
-    //     },
-    //     (error: any) => {
-    //       console.log(`Login error: ${error}`);
-    //     }
-    //   );
+    this.authenticationService
+      .login(this.loginForm.value)
+      .pipe(
+        finalize(() => {
+          this.loginForm.markAsPristine();
+          this.isLoading = false;
+        })
+      )
+      .subscribe(
+        (credentials: Authentication.Credentials) => {
+          console.log(credentials);
+          this.router.navigate(['/'], {
+            replaceUrl: true
+          });
+        },
+        (error: any) => {
+          console.log(`Login error: ${error}`);
+        }
+      );
     this.router.navigate(['/'], {
               replaceUrl: true
             });

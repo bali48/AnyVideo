@@ -1,6 +1,6 @@
 export const environment = {
   env: 'DEV',
   production: false,
-  serverBaseUrl: 'http://development.com',
-  serverUrl: 'http://development.com/v1'
+  serverBaseUrl: 'http://127.0.0.1:3000/api/',
+  serverUrl: 'http://127.0.0.1:3000/api/'
 };

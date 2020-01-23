@@ -9,12 +9,8 @@ import { AuthenticationRoutes } from './authentication.routing';
 import { NotFoundComponent } from './404/not-found.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-
-// import { NotFoundComponent } from '@app/authentication/404/not-found.component';
-// import { AuthenticationRoutes } from '@app/authentication/authentication.routing';
-// import { LoginComponent } from '@app/authentication/login/login.component';
-// import { SignupComponent } from '@app/authentication/signup/signup.component';
-// import { SharedModule } from '@app/shared';
+import { landingpageComponent } from './landingPage';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 @NgModule({
   imports: [
@@ -25,6 +21,8 @@ import { LoginComponent } from './login/login.component';
     SharedModule,
     RouterModule.forChild(AuthenticationRoutes)
   ],
-  declarations: [NotFoundComponent, SignupComponent, LoginComponent]
+  declarations: [NotFoundComponent, SignupComponent,
+     LoginComponent, landingpageComponent, AuthenticationComponent],
+     bootstrap: [AuthenticationComponent]   
 })
 export class AuthenticationModule {}
